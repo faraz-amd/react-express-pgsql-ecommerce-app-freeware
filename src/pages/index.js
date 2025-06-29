@@ -18,7 +18,7 @@ import { Link, navigate } from 'gatsby';
 import { toOptimizedImage } from '../helpers/general';
 
 const IndexPage = () => {
-  const newArrivals = generateMockProductData(3, 'shirt');
+  const newArrivals = generateMockProductData(3, 'jersey');
   const blogData = generateMockBlogData(3);
 
   const goToShop = () => {
@@ -31,8 +31,8 @@ const IndexPage = () => {
       <Hero
         maxWidth={'500px'}
         image={'/banner1.png'}
-        title={'Essentials for a cold winter'}
-        subtitle={'Discover Autumn Winter 2021'}
+        title={'Gear Up for Greatness'}
+        subtitle={'Explore the Mercury Sports Collection'}
         ctaText={'shop now'}
         ctaAction={goToShop}
       />
@@ -40,19 +40,18 @@ const IndexPage = () => {
       {/* Message Container */}
       <div className={styles.messageContainer}>
         <p>
-          This is a demonstration of the Sydney theme for verse by{' '}
-          <span className={styles.gold}>matter design.</span>
+          Welcome to <span className={styles.gold}>Mercury Sports Gear</span> —
+          engineered for performance, designed for champions.
         </p>
         <p>
-          wear by <span className={styles.gold}>sunspel</span> and{' '}
-          <span className={styles.gold}>scotch&soda</span>
+          Inspired by legends. Trusted by <span className={styles.gold}>athletes</span> worldwide.
         </p>
       </div>
 
       {/* Collection Container */}
       <div className={styles.collectionContainer}>
         <Container size={'large'}>
-          <Title name={'New Collection'} />
+          <Title name={'Featured Gear'} />
           <ProductCollectionGrid />
         </Container>
       </div>
@@ -71,7 +70,7 @@ const IndexPage = () => {
         </Container>
       </div>
 
-      {/* Highlight  */}
+      {/* Highlight */}
       <div className={styles.highlightContainer}>
         <Container size={'large'} fullMobile>
           <Highlight
@@ -79,8 +78,8 @@ const IndexPage = () => {
             altImage={'highlight image'}
             miniImage={'/highlightmin.png'}
             miniImageAlt={'mini highlight image'}
-            title={'Luxury Knitwear'}
-            description={`This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife`}
+            title={'Performance Under Pressure'}
+            description={`High-performance gear tested in extreme conditions to push your limits.`}
             textLink={'shop now'}
             link={'/shop'}
           />
@@ -89,39 +88,40 @@ const IndexPage = () => {
 
       {/* Promotion */}
       <div className={styles.promotionContainer}>
-        <Hero image={toOptimizedImage('/banner2.png')} title={`-50% off \n All Essentials`} />
+        <Hero
+          image={toOptimizedImage('/banner2.png')}
+          title={`🔥 Summer Sports Sale \n Up to 50% Off!`}
+        />
         <div className={styles.linkContainers}>
-          <Link to={'/shop'}>WOMAN</Link>
-          <Link to={'/shop'}>MAN</Link>
+          <Link to={'/shop'}>MEN</Link>
+          <Link to={'/shop'}>WOMEN</Link>
         </div>
       </div>
 
       {/* Quote */}
       <Quote
         bgColor={'var(--standard-light-grey)'}
-        title={'about Sydney'}
-        quote={
-          '“We believe in two things: the pursuit of quality in everything we do, and looking after one another. Everything else should take care of itself.”'
-        }
+        title={'About Mercury'}
+        quote={`"Our mission is to empower every athlete to perform their best — from the gym to the grand stage."`}
       />
 
       {/* Blog Grid */}
       <div className={styles.blogsContainer}>
         <Container size={'large'}>
-          <Title name={'Journal'} subtitle={'Notes on life and style'} />
+          <Title name={'From the Locker Room'} subtitle={'Insights, Training Tips, and Gear Reviews'} />
           <BlogPreviewGrid data={blogData} />
         </Container>
       </div>
 
-      {/* Promotion */}
+      {/* Sustainability Promo */}
       <div className={styles.sustainableContainer}>
         <Hero
           image={toOptimizedImage('/banner3.png')}
-          title={'We are Sustainable'}
+          title={'Built for Performance. Made for the Planet.'}
           subtitle={
-            'From caring for our land to supporting our people, discover the steps we’re taking to do more for the world around us.'
+            'Sustainably sourced materials. Long-lasting designs. Because strength begins with responsibility.'
           }
-          ctaText={'read more'}
+          ctaText={'learn more'}
           maxWidth={'660px'}
           ctaStyle={styles.ctaCustomButton}
         />
@@ -130,8 +130,8 @@ const IndexPage = () => {
       {/* Social Media */}
       <div className={styles.socialContainer}>
         <Title
-          name={'Styled by You'}
-          subtitle={'Tag @sydney to be featured.'}
+          name={'#TrainWithMercury'}
+          subtitle={'Tag @mercurysports to be featured.'}
         />
         <div className={styles.socialContentGrid}>
           <img src={toOptimizedImage(`/social/socialMedia1.png`)} alt={'social media 1'} />

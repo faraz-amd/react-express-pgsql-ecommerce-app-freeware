@@ -7,10 +7,11 @@ import Layout from '../components/Layout/Layout';
 
 import * as styles from './about.module.css';
 import { toOptimizedImage } from '../helpers/general';
+
 const AboutPage = (props) => {
-  let historyRef = useRef();
-  let valuesRef = useRef();
-  let sustainabilityRef = useRef();
+  const historyRef = useRef();
+  const valuesRef = useRef();
+  const sustainabilityRef = useRef();
 
   const handleScroll = (elementReference) => {
     if (elementReference) {
@@ -28,15 +29,15 @@ const AboutPage = (props) => {
         <Hero
           maxWidth={'900px'}
           image={'/about.png'}
-          title={`Sydney \n A British brand since 1860`}
+          title={`Mercury Sports Gear\nDriven by Performance`}
         />
 
         <div className={styles.navContainer}>
           <ThemeLink onClick={() => handleScroll(historyRef)} to={'#history'}>
-            History
+            Our Journey
           </ThemeLink>
           <ThemeLink onClick={() => handleScroll(valuesRef)} to={'#values'}>
-            Values
+            Our Values
           </ThemeLink>
           <ThemeLink
             onClick={() => handleScroll(sustainabilityRef)}
@@ -46,80 +47,57 @@ const AboutPage = (props) => {
           </ThemeLink>
         </div>
 
+        {/* History Section */}
         <Container size={'large'} spacing={'min'}>
           <div className={styles.detailContainer} ref={historyRef}>
             <p>
-              Founded in 1860, Sydney is an innovative British brand with a
-              contemporary edge. We make timeless everyday luxury clothing.
+              Founded with a mission to empower athletes of every level, Mercury Sports Gear blends innovation and comfort to elevate your performance on and off the field.
             </p>
             <br />
-            <br />
             <p>
-              We created some of the world's first T-shirts and spent decades
-              perfecting the feel of the cotton. Today we are the only brand
-              that makes T-shirts in its own factory in the UK. And we do this
-              in the same factory we have occupied since 1937.
+              From grassroots sports to elite training, we’ve always believed in designing gear that adapts to your motion, breathes with your body, and performs under pressure. What started as a small passion project has grown into a global sportswear label trusted by professionals and fitness lovers alike.
             </p>
           </div>
         </Container>
 
         <div className={styles.imageContainer}>
-          <img alt={'shirt brand'} src={toOptimizedImage('/about1.png')}></img>
+          <img alt={'mercury gear founders'} src={toOptimizedImage('/about1.png')} />
         </div>
 
+        {/* Values Section */}
         <Container size={'large'} spacing={'min'}>
           <div className={styles.content}>
             <h3>Our Values</h3>
             <div ref={valuesRef}>
               <p>
-                Sunspel produced some of the world's earliest T-shirts. In the
-                late 1800s the business made luxury tunics and undershirts from
-                lightweight Sea Island cotton for export to the Far East and
-                other warm climates. While these garments initially had silk
-                buttoned plackets, these were removed in the early 1900s and
-                replaced with simple bound necks to reduce manufacturing costs -
-                creating the T-shirt. We've supplied the world as the T-shirt
-                has evolved from underwear to outerwear, from symbol of youthful
-                rebellion to everyday wardrobe staple, and we've spent decades
-                refining its every last aspect.
+                At Mercury, we're built on resilience, precision, and a relentless pursuit of performance. Every seam, fabric, and finish is chosen with intent—to push boundaries, not follow them.
               </p>
               <ol>
-                <li>Be an ecowear</li>
-                <li>Sophisticated and not mass-produced</li>
-                <li>Only natural materials</li>
+                <li>Engineered for athletes, by athletes</li>
+                <li>Designed with sustainability and function in mind</li>
+                <li>Tested in real-world conditions, not labs</li>
               </ol>
-              <img alt={'founder'} src={toOptimizedImage('/about2.png')}></img>
+              <img alt={'team values image'} src={toOptimizedImage('/about2.png')} />
             </div>
+
+            {/* Sustainability Section */}
             <h3>Sustainability</h3>
             <div id={'#sustainability'} ref={sustainabilityRef}>
               <p>
-                Our founder, Thomas Hill, had both an eye for quality and a
-                desire to innovate. As well as using the finest fibres such as
-                Sea Island cotton, cashmere and silk, he invented his own
-                fabrics. Sunspel continues this commitment to innovation today
-                and our unique fabrics include: Q100 Sea Island cotton, Q82
-                Supima cotton, Q75 warp knit mesh cotton and Q14 warp knit
-                cellular cotton. The technology behind these fabrics remains
-                unchanged today and all Sunspel products use the finest cottons,
-                wools and fibres.
+                Our planet is the only playing field we all share. That's why sustainability isn’t an afterthought—it’s built into every thread. From recycled polyester to organic cotton, we are committed to reducing our impact without compromising performance.
               </p>
               <p>
-                Made in Long Eaton, England and crafted from our luxurious long
-                staple Supima cotton for unparalleled softness, comfort and
-                durability, the Sunspel T-shirt has a classic fit and only the
-                most essential details.{' '}
+                We partner with ethical manufacturers, minimize packaging waste, and continue to innovate in material sourcing. Whether you're sprinting on turf or hiking a summit, Mercury gear lets you move forward—responsibly.
               </p>
               <p>
-                With over 100 years spent perfecting fabric, fit and style, the
-                Sunspel Classic T-shirt is recognised as the finest in the
-                world.
+                Join us in shaping a future where sport and sustainability coexist. Because greatness is measured not just in speed or strength, but in the legacy we leave behind.
               </p>
             </div>
           </div>
         </Container>
 
         <div className={styles.imageContainer}>
-          <img alt={'shirt backwards'} src={toOptimizedImage('/about3.png')}></img>
+          <img alt={'sustainable sportswear'} src={toOptimizedImage('/about3.png')} />
         </div>
       </div>
     </Layout>
