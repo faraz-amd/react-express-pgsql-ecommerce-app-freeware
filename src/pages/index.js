@@ -30,7 +30,7 @@ const IndexPage = () => {
       {/* Hero Container */}
       <Hero
         maxWidth={'500px'}
-        image={'/banner1.png'}
+        image={'/banner12.png'}
         title={'Gear Up for Greatness'}
         subtitle={'Explore the Mercury Sports Collection'}
         ctaText={'shop now'}
@@ -101,7 +101,7 @@ const IndexPage = () => {
       {/* Quote */}
       <Quote
         bgColor={'var(--standard-light-grey)'}
-        title={'About Mercury'}
+        title={'About Mercury Sports Gear'}
         quote={`"Our mission is to empower every athlete to perform their best — from the gym to the grand stage."`}
       />
 
@@ -116,7 +116,7 @@ const IndexPage = () => {
       {/* Sustainability Promo */}
       <div className={styles.sustainableContainer}>
         <Hero
-          image={toOptimizedImage('/banner3.png')}
+          image={toOptimizedImage('/banner1.png')}
           title={'Built for Performance. Made for the Planet.'}
           subtitle={
             'Sustainably sourced materials. Long-lasting designs. Because strength begins with responsibility.'
